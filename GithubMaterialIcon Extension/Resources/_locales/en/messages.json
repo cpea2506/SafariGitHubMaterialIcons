@@ -1,0 +1,10 @@
+{
+  "extension_name": {
+    "message": "Github Material Icon Extension",
+    "description": "The display name for the extension."
+  },
+  "extension_description": {
+    "message": "Injected Material Icon into your Github tree.",
+    "description": "Description of what the extension does."
+  }
+}
