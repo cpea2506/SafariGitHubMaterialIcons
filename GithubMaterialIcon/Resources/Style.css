@@ -42,7 +42,7 @@ body.state-off :is(.state-on, .state-unknown) {
 
 button {
     font-size: 1em;
-    background-color: rgb(30, 75, 131);
+    background-color: #035698;
     border: none;
     color: white;
     border-radius: 4px;
