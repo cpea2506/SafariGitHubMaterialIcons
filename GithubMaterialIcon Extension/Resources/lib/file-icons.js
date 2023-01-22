@@ -196,7 +196,12 @@ const fileIconsMap = [
             "selector.ts",
             "selectors.ts",
         ],
-        fileNames: ["selector.js", "selectors.js", "selector.ts", "selectors.ts"],
+        fileNames: [
+            "selector.js",
+            "selectors.js",
+            "selector.ts",
+            "selectors.ts",
+        ],
     },
     {
         name: "redux-store",
@@ -385,7 +390,11 @@ const fileIconsMap = [
     {
         name: "gradle",
         fileExtensions: ["gradle"],
-        fileNames: ["gradle.properties", "gradlew", "gradle-wrapper.properties"],
+        fileNames: [
+            "gradle.properties",
+            "gradlew",
+            "gradle-wrapper.properties",
+        ],
     },
     { name: "word", fileExtensions: ["doc", "docx", "rtf", "odt"] },
     {
@@ -2103,7 +2112,12 @@ const fileIconsMap = [
     { name: "ndst", fileExtensions: ["ndst.yml", "ndst.yaml", "ndst.json"] },
     {
         name: "plop",
-        fileNames: ["plopfile.js", "plopfile.cjs", "plopfile.mjs", "plopfile.ts"],
+        fileNames: [
+            "plopfile.js",
+            "plopfile.cjs",
+            "plopfile.mjs",
+            "plopfile.ts",
+        ],
     },
     { name: "tobi", fileExtensions: ["tobi"] },
     { name: "tobimake", fileNames: [".tobimake"] },
@@ -2162,9 +2176,4 @@ const fileIconsMap = [
             ".cracorc",
         ],
     },
-];
-
-const fileIcons = {
-    names: (fileName) => fileIconsMap.find(item => item.fileNames?.includes(fileName)),
-    extensions: (fileExtension) => fileIconsMap.find(item => item.fileExtensions?.includes(fileExtension))
-}
+]

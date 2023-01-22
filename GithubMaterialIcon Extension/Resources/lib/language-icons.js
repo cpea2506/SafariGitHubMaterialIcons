@@ -118,7 +118,12 @@ const languageIconsMap = [
     { name: "otne", ids: ["otne"] },
     {
         name: "twine",
-        ids: ["twee3", "twee3-harlowe-3", "twee3-chapbook-1", "twee3-sugarcube-2"],
+        ids: [
+            "twee3",
+            "twee3-harlowe-3",
+            "twee3-chapbook-1",
+            "twee3-sugarcube-2",
+        ],
     },
     { name: "grain", ids: ["grain"] },
     { name: "lolcode", ids: ["lolcode"] },
@@ -133,6 +138,4 @@ const languageIconsMap = [
     { name: "dart", ids: ["dart"] },
     { name: "cadence", ids: ["cadence"] },
     { name: "stylable", ids: ["stylable"] },
-];
-
-const languageIcons = (ids) => languageIconsMap.find(item => item.ids.includes(ids))
+]

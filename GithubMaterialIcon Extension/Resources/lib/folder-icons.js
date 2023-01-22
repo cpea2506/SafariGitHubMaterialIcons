@@ -16,7 +16,7 @@ const folderIconsMap = [
     },
     {
         name: "folder-sass",
-        folderNames: ["sass", "_sass", "scss", "_scss"]
+        folderNames: ["sass", "_sass", "scss", "_scss"],
     },
     {
         name: "folder-images",
@@ -786,7 +786,4 @@ const folderIconsMap = [
         name: "folder-proto",
         folderNames: ["protobufs", "proto"],
     },
-];
-
-
-const folderIcons = (fileName) => folderIconsMap.find(item => item.folderNames.includes(fileName))
+]
