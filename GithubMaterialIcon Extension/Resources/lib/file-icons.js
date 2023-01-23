@@ -147,7 +147,7 @@ const fileIconsMap = [
             "icns",
         ],
     },
-    { name: "javascript", fileExtensions: ["esx", "mjs"] },
+    { name: "javascript", fileExtensions: ["js", "esx", "mjs"] },
     { name: "react", fileExtensions: ["jsx"] },
     { name: "react_ts", fileExtensions: ["tsx"] },
     {
@@ -237,6 +237,7 @@ const fileIconsMap = [
             ".clang-tidy",
         ],
     },
+    { name: "typescript", fileExtensions: ["ts"] },
     {
         name: "typescript-def",
         fileExtensions: ["d.ts", "d.cts", "d.mts"],

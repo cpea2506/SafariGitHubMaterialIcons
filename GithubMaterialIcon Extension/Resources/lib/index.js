@@ -26,6 +26,7 @@ const selectors = {
  */
 function replaceIconInRow(rowItem) {
     // Get file/folder name.
+    /** @type string */
     const fileName = rowItem
         .querySelector(selectors.filename)
         ?.innerText?.split("/")[0]
@@ -39,7 +40,11 @@ function replaceIconInRow(rowItem) {
     // SVG to be replaced.
     const iconElement = rowItem.querySelector(selectors.icon)
 
-    if (!iconElement?.getAttribute("data-github-material-icons")) {
+    if (
+        !iconElement ||
+        // already exists one
+        iconElement?.getAttribute("data-github-material-icons")
+    ) {
         return
     }
 
@@ -82,7 +87,16 @@ function replaceElementWithIcon(iconElement, iconName, fileName) {
     newSVG.setAttribute("data-github-material-icons-filename", fileName)
     newSVG.src = browser.runtime.getURL(`icons/${iconName}.svg`)
 
-    iconElement.parentNode.replaceChild(newSVG, iconElement)
+    iconElement
+        .getAttributeNames()
+        .forEach(
+            (attr) =>
+                attr !== "src" &&
+                !/^data-github-material-icons/.test(attr) &&
+                newSVG.setAttribute(attr, iconElement.getAttribute(attr)),
+        )
+
+    iconElement.replaceWith(newSVG)
 }
 
 /**
@@ -163,7 +177,6 @@ const replaceAllIcons = () => {
             "data-github-material-icons-filename",
         )
 
-        console.log(iconName)
         replaceElementWithIcon(element, iconName, fileName)
     })
 }
