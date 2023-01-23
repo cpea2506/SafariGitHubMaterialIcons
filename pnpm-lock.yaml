@@ -4,10 +4,6 @@ specifiers:
   '@fsouza/prettierd': ^0.23.2
   eslint-config-prettier: ^8.6.0
   eslint_d: ^12.2.1
-  selector-observer: ^2.1.6
-
-dependencies:
-  selector-observer: 2.1.6
 
 devDependencies:
   '@fsouza/prettierd': 0.23.2
@@ -802,16 +798,6 @@ packages:
     dependencies:
       queue-microtask: 1.2.3
     dev: true
-
-  /selector-observer/2.1.6:
-    resolution: {integrity: sha512-/I0XLOlDbzk9tnZUqNos/2cshOxTNk1QhoXtJRR8OZ4JjVfXq6JUjqo4icPDQ8fzNr2uQ32mfOzJ6sXPao/6MA==}
-    dependencies:
-      selector-set: 1.1.5
-    dev: false
-
-  /selector-set/1.1.5:
-    resolution: {integrity: sha512-6SQw6yMew5iOZ8/cDHDEnJWRM4ot2mxP6szZyF5ptrBogw4AcS4EXRj/8BUfgAMwVfdL84qpModlBMOl2NVrsQ==}
-    dev: false
 
   /semver/7.3.8:
     resolution: {integrity: sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==}
