@@ -9,31 +9,33 @@ const observer = new MutationObserver(() => {
         return
     }
 
-    // start to setup icons
-    rowList = document.querySelectorAll(selectors.row)
+    setTimeout(() => {
+        // start to setup icons
+        rowList = document.querySelectorAll(selectors.row)
 
-    rowList.forEach((row) => {
-        const callback = () => replaceIconInRow(row)
+        rowList.forEach((row) => {
+            const callback = () => replaceIconInRow(row)
 
-        if (executions <= rushBatch) {
-            callback() // immediately run to prevent visual "blink"
+            if (executions <= rushBatch) {
+                callback() // immediately run to prevent visual "blink"
 
-            // run again later to catch any icons that are missed in large repositories
-            setTimeout(callback, 20)
-            executions += 1
-        } else {
-            // run without blocking to prevent delayed rendering of large folders too much
-            setTimeout(callback)
+                // run again later to catch any icons that are missed in large repositories
+                setTimeout(callback, 20)
+                executions += 1
+            } else {
+                // run without blocking to prevent delayed rendering of large folders too much
+                setTimeout(callback)
 
-            clearTimeout(timerID)
+                clearTimeout(timerID)
 
-            // reset execution tracker
-            timerID = setTimeout(() => (executions = 0), 1000)
-        }
+                // reset execution tracker
+                timerID = setTimeout(() => (executions = 0), 1000)
+            }
+        }, 0)
+
+        // replace all icons that was setup before
+        replaceAllIcons()
     })
-
-    // replace all icons that was setup before
-    replaceAllIcons()
 })
 
 observer.observe(document.body, {
