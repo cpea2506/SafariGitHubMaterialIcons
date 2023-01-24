@@ -23,7 +23,6 @@
 		58A5BB7D2976A77D0076E03E /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 58A5BB7C2976A77D0076E03E /* content.js */; };
 		58A5BBA029794D3E0076E03E /* lib in Resources */ = {isa = PBXBuildFile; fileRef = 58A5BB9F29794D3E0076E03E /* lib */; };
 		58AA4E61297B103200520592 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 58AA4E60297B103200520592 /* icons */; };
-		58BA3FF1297BD3DF0077300E /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 58BA3FF0297BD3DF0077300E /* background.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +71,6 @@
 		58A5BB852976A77D0076E03E /* GithubMaterialIcon_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GithubMaterialIcon_Extension.entitlements; sourceTree = "<group>"; };
 		58A5BB9F29794D3E0076E03E /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = "<group>"; };
 		58AA4E60297B103200520592 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icons; sourceTree = "<group>"; };
-		58BA3FF0297BD3DF0077300E /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +94,6 @@
 		58A5BB472976A77B0076E03E = {
 			isa = PBXGroup;
 			children = (
-				58BA3FF0297BD3DF0077300E /* background.js */,
 				58A5BB522976A77B0076E03E /* GithubMaterialIcon */,
 				58A5BB702976A77D0076E03E /* GithubMaterialIcon Extension */,
 				58A5BB512976A77B0076E03E /* Products */,
@@ -244,7 +241,6 @@
 			files = (
 				58A5BB5A2976A77B0076E03E /* Icon.png in Resources */,
 				58A5BB632976A77B0076E03E /* Main.storyboard in Resources */,
-				58BA3FF1297BD3DF0077300E /* background.js in Resources */,
 				58A5BB5E2976A77B0076E03E /* Script.js in Resources */,
 				58A5BB582976A77B0076E03E /* Main.html in Resources */,
 				58A5BB652976A77D0076E03E /* Assets.xcassets in Resources */,
