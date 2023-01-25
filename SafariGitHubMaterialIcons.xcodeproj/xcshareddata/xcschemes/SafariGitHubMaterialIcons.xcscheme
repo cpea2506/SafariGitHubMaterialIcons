@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "58A5BB4F2976A77B0076E03E"
-               BuildableName = "GithubMaterialIcon.app"
-               BlueprintName = "GithubMaterialIcon"
-               ReferencedContainer = "container:GithubMaterialIcon.xcodeproj">
+               BlueprintIdentifier = "583DCE3129819ECA0055B4CE"
+               BuildableName = "SafariGitHubMaterialIcons.app"
+               BlueprintName = "SafariGitHubMaterialIcons"
+               ReferencedContainer = "container:SafariGitHubMaterialIcons.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -31,7 +31,7 @@
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -44,10 +44,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "58A5BB4F2976A77B0076E03E"
-            BuildableName = "GithubMaterialIcon.app"
-            BlueprintName = "GithubMaterialIcon"
-            ReferencedContainer = "container:GithubMaterialIcon.xcodeproj">
+            BlueprintIdentifier = "583DCE3129819ECA0055B4CE"
+            BuildableName = "SafariGitHubMaterialIcons.app"
+            BlueprintName = "SafariGitHubMaterialIcons"
+            ReferencedContainer = "container:SafariGitHubMaterialIcons.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,10 +61,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "58A5BB4F2976A77B0076E03E"
-            BuildableName = "GithubMaterialIcon.app"
-            BlueprintName = "GithubMaterialIcon"
-            ReferencedContainer = "container:GithubMaterialIcon.xcodeproj">
+            BlueprintIdentifier = "583DCE3129819ECA0055B4CE"
+            BuildableName = "SafariGitHubMaterialIcons.app"
+            BlueprintName = "SafariGitHubMaterialIcons"
+            ReferencedContainer = "container:SafariGitHubMaterialIcons.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

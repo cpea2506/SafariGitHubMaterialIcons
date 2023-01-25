@@ -1,6 +1,6 @@
 <h1 align="center">GitHub Material Icons on Safari</h1>
 
-GitHub Material Icons is a Safari extension that replaces default file/folder icons with material icons on your GitHub interface.  This extension is based and dependent on the popular [Material Icon Theme](https://github.com/PKief/vscode-material-icon-theme) extension for VSCode and [Material Icon for GitHub](https://github.com/Claudiohbsantos/github-material-icons-extension) extension on Chromium and Firefox.
+Safari GitHub Material Icons is a Safari extension that replaces default file/folder icons with material icons on your GitHub interface. This extension is based and dependent on the popular [Material Icon Theme](https://github.com/PKief/vscode-material-icon-theme) extension for VSCode and [Material Icon for GitHub](https://github.com/Claudiohbsantos/github-material-icons-extension) extension on Chromium and Firefox.
 
 <div align="center">
 
@@ -8,14 +8,23 @@ GitHub Material Icons is a Safari extension that replaces default file/folder ic
 
 </div>
 
-## Prerequisite
+## How to start?
+
+### Prerequisite
 
 - Xcode
 - [pnpm](https://pnpm.io)
 
-## How to build and run
+### Build and run
 
-1. Run `pnpm install` to install necessary dependencies
-2. Open `GithubMaterialIcon.xcodeproj` with Xcode
-3. Menu `Product` -> `Run` or `Command + R`
-4. Open any of your GitHub repository page and enjoy!
+1. Clone this project.
+
+   ```bash
+   git clone https://github.com/cpea2506/SafariGitHubMaterialIcons.git
+   ```
+
+2. Run `pnpm install` to install necessary dependencies.
+3. Open `SafariGitHubMaterialIcons.xcodeproj` with Xcode.
+4. Menu `Product` -> `Run` or `Command + R` to run project.
+5. Enable the extension in Safari's `Extensions` setting.
+6. Open any of your GitHub repository page and enjoy!
