@@ -6,7 +6,7 @@ const languageIconsMap = [
     { name: "matlab", ids: ["matlab"] },
     {
         name: "settings",
-        ids: ["makefile", "toml", "ini", "properties"],
+        ids: ["makefile", "ini", "properties"],
     },
     { name: "shaderlab", ids: ["shaderlab"] },
     { name: "diff", ids: ["diff"] },
@@ -138,4 +138,5 @@ const languageIconsMap = [
     { name: "dart", ids: ["dart"] },
     { name: "cadence", ids: ["cadence"] },
     { name: "stylable", ids: ["stylable"] },
+    { name: "toml", ids: ["toml"] },
 ]

@@ -2,7 +2,10 @@
  * Defines file icons
  */
 const fileIconsMap = [
-    { name: "html", fileExtensions: ["htm", "xhtml", "html_vm", "asp"] },
+    {
+        name: "html",
+        fileExtensions: ["htm", "xhtml", "html_vm", "asp", "html"],
+    },
     {
         name: "pug",
         fileExtensions: ["jade", "pug"],
@@ -221,7 +224,6 @@ const fileIconsMap = [
             "settings",
             "option",
             "props",
-            "toml",
             "prefs",
             "sln.dotsettings",
             "sln.dotsettings.user",
@@ -458,7 +460,7 @@ const fileIconsMap = [
         ],
     },
     { name: "lib", fileExtensions: ["lib", "bib"] },
-    { name: "ruby", fileExtensions: ["rb", "erb"] },
+    { name: "ruby", fileExtensions: ["rb", "erb"], fileNames: ["Podfile", "Brewfile"] },
     { name: "gemfile", fileNames: ["gemfile"] },
     {
         name: "rubocop",
@@ -2143,10 +2145,7 @@ const fileIconsMap = [
         ],
     },
     { name: "tree", fileExtensions: ["tree"] },
-    {
-        name: "cadence",
-        fileExtensions: ["cdc"],
-    },
+    { name: "cadence", fileExtensions: ["cdc"] },
     { name: "caddy", fileNames: ["Caddyfile"] },
     { name: "antlr", fileExtensions: ["g4"] },
     { name: "stylable", fileExtensions: ["st.css"] },
@@ -2177,4 +2176,6 @@ const fileIconsMap = [
             ".cracorc",
         ],
     },
+    { name: "cargo", fileNames: ["Cargo.toml"] },
+    { name: "toml", fileExtensions: ["toml"] },
 ]
