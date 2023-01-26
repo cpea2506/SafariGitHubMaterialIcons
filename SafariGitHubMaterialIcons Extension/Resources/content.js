@@ -12,9 +12,6 @@ const observer = new MutationObserver(() => {
         // start to setup icons
         const rowList = document.querySelectorAll(selectors.row)
         rowList.forEach(replaceIconInRow)
-
-        // replace all icons that was setup before
-        replaceAllIcons()
     })
 })
 

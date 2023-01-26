@@ -151,20 +151,3 @@ function getIconName(fileName, fileExtension) {
 
     return "file"
 }
-
-const replaceAllIcons = () => {
-    const iconElements = document.querySelectorAll(
-        "img[data-github-material-icons]",
-    )
-
-    iconElements.forEach((element) => {
-        const iconName = element.getAttribute(
-            "data-github-material-icons-iconname",
-        )
-        const fileName = element.getAttribute(
-            "data-github-material-icons-filename",
-        )
-
-        replaceIcon(element, iconName, fileName)
-    })
-}
