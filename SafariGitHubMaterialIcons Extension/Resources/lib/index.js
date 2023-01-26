@@ -22,12 +22,12 @@ const selectors = {
 /**
  * Replace file/folder icons in a row.
  *
- * @param {HTMLElement} rowItem item in row.
+ * @param {HTMLElement} row item in row.
  */
-function replaceIconInRow(rowItem) {
+function replaceIconInRow(row) {
     // Get file/folder name.
     /** @type string */
-    const fileName = rowItem
+    const fileName = row
         .querySelector(selectors.filename)
         ?.innerText?.split("/")[0]
         .trim()
@@ -38,7 +38,7 @@ function replaceIconInRow(rowItem) {
     }
 
     // SVG to be replaced.
-    const iconElement = rowItem.querySelector(selectors.icon)
+    const iconElement = row.querySelector(selectors.icon)
 
     if (
         !iconElement ||
@@ -48,53 +48,39 @@ function replaceIconInRow(rowItem) {
         return
     }
 
-    const isDir = iconElement.getAttribute("aria-label") === "Directory"
-    const isSubmodule = iconElement.getAttribute("aria-label") === "Submodule"
-    const isSymlink =
-        iconElement.getAttribute("aria-label") === "Symlink Directory"
-
     // Get file extension.
     const fileExtension = fileName.match(
         /.*?[.](?<ext>xml.dist|xml.dist.sample|yml.dist|\w+)$/,
     )?.[1]
 
     // returns icon name if found or undefined.
-    let iconName = lookForMatch(
-        fileName,
-        fileExtension,
-        isDir,
-        isSubmodule,
-        isSymlink,
-    )
+    let iconName = getIconName(fileName, fileExtension)
 
     if (!iconName) {
         return
     }
 
-    replaceElementWithIcon(iconElement, iconName, fileName)
+    replaceIcon(iconElement, iconName, fileName)
 }
 
-/** Replace icon element source with correspoding icon
+/** Replace icon element source with corresponding icon
  *
  * @param {HTMLElement} iconElement icon element.
  * @param {string} iconName name of icon to replace.
  * @param {string} fileName name of the file.
  */
-function replaceElementWithIcon(iconElement, iconName, fileName) {
+function replaceIcon(iconElement, iconName, fileName) {
     const newSVG = document.createElement("img")
     newSVG.setAttribute("data-github-material-icons", "icon")
     newSVG.setAttribute("data-github-material-icons-iconname", iconName)
     newSVG.setAttribute("data-github-material-icons-filename", fileName)
     newSVG.src = browser.runtime.getURL(`icons/${iconName}.svg`)
 
-    iconElement
-        .getAttributeNames()
-        .forEach(
-            (attr) =>
-                attr !== "src" &&
-                !/^data-github-material-icons/.test(attr) &&
-                newSVG.setAttribute(attr, iconElement.getAttribute(attr)),
-        )
+    iconElement.getAttributeNames().forEach((attr) => {
+        if (attr !== "src" && !/^data-github-material-icons/.test(attr)) {
+            newSVG.setAttribute(attr, iconElement.getAttribute(attr))
+        }
+    })
 
     iconElement.replaceWith(newSVG)
 }
@@ -104,12 +90,14 @@ function replaceElementWithIcon(iconElement, iconName, fileName) {
  *
  * @param {string} fileName File name.
  * @param {string} fileExtension File extension.
- * @param {boolean} isDir Check if directory type.
- * @param {boolean} isSubmodule Check if submodule type.
- * @param {boolean} isSymlink Check if symlink
  * @returns {string} The matched icon name.
  */
-function lookForMatch(fileName, fileExtension, isDir, isSubmodule, isSymlink) {
+function getIconName(fileName, fileExtension) {
+    const isDir = iconElement.getAttribute("aria-label") === "Directory"
+    const isSubmodule = iconElement.getAttribute("aria-label") === "Submodule"
+    const isSymlink =
+        iconElement.getAttribute("aria-label") === "Symlink Directory"
+
     const lowerFileName = fileName.toLowerCase()
 
     if (isSubmodule) {
@@ -177,6 +165,6 @@ const replaceAllIcons = () => {
             "data-github-material-icons-filename",
         )
 
-        replaceElementWithIcon(element, iconName, fileName)
+        replaceIcon(element, iconName, fileName)
     })
 }
