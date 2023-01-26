@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.1](https://github.com/cpea2506/SafariGitHubMaterialIcons/compare/v1.0.0...v1.0.1) (2023-01-26)
+
+
+### Bug Fixes
+
+* icon element needs to be passed to getIconName ([c72ab84](https://github.com/cpea2506/SafariGitHubMaterialIcons/commit/c72ab84dd4f62b9251c5fe7a56e17b55797c4dc3))
+* replaceAllIcons causes icon to be replaced twice ([af5712b](https://github.com/cpea2506/SafariGitHubMaterialIcons/commit/af5712b4861cf9569666040b63470a05a733d9e4))
+
+
+### Performance Improvements
+
+* do not set icon if it's already replaced ([aa6acd1](https://github.com/cpea2506/SafariGitHubMaterialIcons/commit/aa6acd1d9c32af4615ab5f8987e52ee1a280d8ba))
+
 ## 1.0.0 (2023-01-25)
 
 
