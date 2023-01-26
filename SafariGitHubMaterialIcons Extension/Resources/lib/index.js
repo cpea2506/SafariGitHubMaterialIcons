@@ -54,7 +54,7 @@ function replaceIconInRow(row) {
     )?.[1]
 
     // returns icon name if found or undefined.
-    let iconName = getIconName(fileName, fileExtension)
+    let iconName = getIconName(iconElement, fileName, fileExtension)
 
     if (!iconName) {
         return
@@ -86,18 +86,17 @@ function replaceIcon(iconElement, iconName, fileName) {
 }
 
 /**
- * Lookup for matched file/folder icon name.
- *
+ * Lookup for matched file/folder icon name in material design icon.
+ * @param {HTMLElement} iconElement icon element
  * @param {string} fileName File name.
  * @param {string} fileExtension File extension.
  * @returns {string} The matched icon name.
  */
-function getIconName(fileName, fileExtension) {
-    const isDir = iconElement.getAttribute("aria-label") === "Directory"
-    const isSubmodule = iconElement.getAttribute("aria-label") === "Submodule"
-    const isSymlink =
-        iconElement.getAttribute("aria-label") === "Symlink Directory"
-
+function getIconName(iconElement, fileName, fileExtension) {
+    const ariaLabel = iconElement.getAttribute("aria-label")
+    const isDir = ariaLabel === "Directory"
+    const isSubmodule = ariaLabel === "Submodule"
+    const isSymlink = ariaLabel === "Symlink Directory"
     const lowerFileName = fileName.toLowerCase()
 
     if (isSubmodule) {
