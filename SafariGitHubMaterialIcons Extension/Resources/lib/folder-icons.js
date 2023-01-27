@@ -786,4 +786,8 @@ const folderIconsMap = [
         name: "folder-proto",
         folderNames: ["protobufs", "proto"],
     },
+    {
+        name: "folder-cargo",
+        folderNames: [".cargo"],
+    },
 ]

@@ -2176,6 +2176,7 @@ const fileIconsMap = [
             ".cracorc",
         ],
     },
-    { name: "cargo", fileNames: ["Cargo.toml"] },
+    { name: "cargo-toml", fileNames: ["Cargo.toml"] },
+    { name: "cargo-lock", fileNames: ["Cargo.lock"] },
     { name: "toml", fileExtensions: ["toml"] },
 ]

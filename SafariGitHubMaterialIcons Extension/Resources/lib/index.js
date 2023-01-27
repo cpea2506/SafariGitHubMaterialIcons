@@ -48,13 +48,8 @@ function replaceIconInRow(row) {
         return
     }
 
-    // Get file extension.
-    const fileExtension = fileName.match(
-        /.*?[.](?<ext>xml.dist|xml.dist.sample|yml.dist|\w+)$/,
-    )?.[1]
-
     // returns icon name if found or undefined.
-    let iconName = getIconName(iconElement, fileName, fileExtension)
+    let iconName = getIconName(iconElement, fileName)
 
     if (!iconName) {
         return
@@ -89,15 +84,17 @@ function replaceIcon(iconElement, iconName, fileName) {
  * Lookup for matched file/folder icon name in material design icon.
  * @param {HTMLElement} iconElement icon element
  * @param {string} fileName File name.
- * @param {string} fileExtension File extension.
  * @returns {string} The matched icon name.
  */
-function getIconName(iconElement, fileName, fileExtension) {
+function getIconName(iconElement, fileName) {
     const ariaLabel = iconElement.getAttribute("aria-label")
     const isDir = ariaLabel === "Directory"
     const isSubmodule = ariaLabel === "Submodule"
     const isSymlink = ariaLabel === "Symlink Directory"
     const lowerFileName = fileName.toLowerCase()
+    const fileExtension = fileName.match(
+        /.*?[.](?<ext>xml.dist|xml.dist.sample|yml.dist|\w+)$/,
+    )?.[1]
 
     if (isSubmodule) {
         return "folder-git"
