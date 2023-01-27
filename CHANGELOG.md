@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/cpea2506/SafariGitHubMaterialIcons/compare/v1.0.1...v1.1.0) (2023-01-27)
+
+
+### Features
+
+* update cargo, toml icon, include .cargo folder ([b48460f](https://github.com/cpea2506/SafariGitHubMaterialIcons/commit/b48460f874dacb8918dbd410eeef9d1341bfeaf0))
+
 ## [1.0.1](https://github.com/cpea2506/SafariGitHubMaterialIcons/compare/v1.0.0...v1.0.1) (2023-01-26)
 
 
