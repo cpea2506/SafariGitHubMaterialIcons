@@ -58,26 +58,26 @@ function replaceIconInRow(row) {
     replaceIcon(iconElement, iconName, fileName)
 }
 
-/** Replace icon element source with corresponding icon
+/** Replace old icon with new corresponding icon
  *
- * @param {HTMLElement} iconElement icon element.
+ * @param {HTMLElement} oldSVG icon element.
  * @param {string} iconName name of icon to replace.
  * @param {string} fileName name of the file.
  */
-function replaceIcon(iconElement, iconName, fileName) {
-    const newSVG = document.createElement("img")
+function replaceIcon(oldSVG, iconName, fileName) {
+    const newSVG = new Image()
     newSVG.setAttribute("data-github-material-icons", "icon")
     newSVG.setAttribute("data-github-material-icons-iconname", iconName)
     newSVG.setAttribute("data-github-material-icons-filename", fileName)
     newSVG.src = browser.runtime.getURL(`icons/${iconName}.svg`)
 
-    iconElement.getAttributeNames().forEach((attr) => {
-        if (attr !== "src" && !/^data-github-material-icons/.test(attr)) {
-            newSVG.setAttribute(attr, iconElement.getAttribute(attr))
-        }
-    })
+    // foward all attributes from old svg to new svg
+    for (const attr of oldSVG.attributes) {
+        newSVG.setAttribute(attr.name, attr.value)
+    }
 
-    iconElement.replaceWith(newSVG)
+    // replace the old one with new one
+    oldSVG.replaceWith(newSVG)
 }
 
 /**
