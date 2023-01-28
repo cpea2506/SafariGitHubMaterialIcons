@@ -8,11 +8,8 @@ const observer = new MutationObserver(() => {
         return
     }
 
-    setTimeout(() => {
-        // start to setup icons
-        const rowList = document.querySelectorAll(selectors.row)
-        rowList.forEach(replaceIconInRow)
-    })
+    // start to setup icons
+    document.querySelectorAll(selectors.row).forEach(replaceIconInRow)
 })
 
 observer.observe(document.body, { childList: true, subtree: true })
