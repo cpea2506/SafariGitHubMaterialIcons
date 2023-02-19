@@ -1,7 +1,7 @@
 env:
-  browser: true
-  es2022: true
-  node: true
-parserOptions: 
-  ecmaVersion: latest
+    browser: true
+    es2022: true
+    node: true
+parserOptions:
+    ecmaVersion: latest
 extends: ["prettier"]

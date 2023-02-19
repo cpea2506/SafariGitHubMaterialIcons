@@ -1,7 +1,4 @@
-/**
- * Defines folder icons
- */
-const folderIconsMap = [
+const folderIcons = [
     {
         name: "folder-src",
         folderNames: ["src", "srcs", "source", "sources", "code"],
@@ -689,7 +686,7 @@ const folderIconsMap = [
         name: "folder-update",
         folderNames: ["update", "updates", "upgrade", "upgrades"],
     },
-    { name: "folder-intellij", folderNames: [".idea"], light: true },
+    { name: "folder-intellij", folderNames: [".idea"] },
     {
         name: "folder-azure-pipelines",
         folderNames: [".azure-pipelines", ".azure-pipelines-ci"],
@@ -772,7 +769,7 @@ const folderIconsMap = [
     },
     {
         name: "folder-angular",
-        folderNames: [".angular"],
+        folderNames: ["angular", ".angular"],
     },
     {
         name: "folder-unity",

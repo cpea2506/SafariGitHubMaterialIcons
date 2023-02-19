@@ -1,7 +1,4 @@
-/**
- * Defines file icons
- */
-const fileIconsMap = [
+const fileIcons = [
     {
         name: "html",
         fileExtensions: ["htm", "xhtml", "html_vm", "asp", "html"],
@@ -15,7 +12,7 @@ const fileIconsMap = [
         name: "markdown",
         fileExtensions: ["md", "markdown", "rst"],
     },
-    { name: "blink", fileExtensions: ["blink"], light: true },
+    { name: "blink", fileExtensions: ["blink"] },
     { name: "css", fileExtensions: ["css"] },
     { name: "sass", fileExtensions: ["scss", "sass"] },
     { name: "less", fileExtensions: ["less"] },
@@ -42,7 +39,6 @@ const fileIconsMap = [
     {
         name: "jinja",
         fileExtensions: ["jinja", "jinja2", "j2", "jinja-html"],
-        light: true,
     },
     { name: "proto", fileExtensions: ["proto"] },
     {
@@ -460,12 +456,15 @@ const fileIconsMap = [
         ],
     },
     { name: "lib", fileExtensions: ["lib", "bib"] },
-    { name: "ruby", fileExtensions: ["rb", "erb"], fileNames: ["Podfile", "Brewfile"] },
+    {
+        name: "ruby",
+        fileExtensions: ["rb", "erb"],
+        fileNames: ["Podfile", "Brewfile"],
+    },
     { name: "gemfile", fileNames: ["gemfile"] },
     {
         name: "rubocop",
         fileNames: [".rubocop.yml", ".rubocop-todo.yml", ".rubocop_todo.yml"],
-        light: true,
     },
     { name: "fsharp", fileExtensions: ["fs", "fsx", "fsi", "fsproj"] },
     { name: "swift", fileExtensions: ["swift"] },
@@ -807,7 +806,6 @@ const fileIconsMap = [
     {
         name: "vercel",
         fileNames: ["vercel.json", ".vercelignore", "now.json", ".nowignore"],
-        light: true,
     },
     {
         name: "verdaccio",
@@ -821,12 +819,10 @@ const fileIconsMap = [
             "next.config.ts",
             "next.config.mts",
         ],
-        light: true,
     },
     {
         name: "remix",
         fileNames: ["remix.config.js", "remix.config.ts"],
-        light: true,
     },
     {
         name: "terraform",
@@ -1148,7 +1144,6 @@ const fileIconsMap = [
     },
     {
         name: "turborepo",
-        light: true,
         fileNames: ["turbo.json"],
     },
     {
@@ -1315,7 +1310,6 @@ const fileIconsMap = [
             "auto-config.ts",
             "auto-config.js",
         ],
-        light: true,
     },
     {
         name: "mocha",
@@ -1388,9 +1382,8 @@ const fileIconsMap = [
             ".stylelintignore",
             ".stylelintcache",
         ],
-        light: true,
     },
-    { name: "code-climate", fileNames: [".codeclimate.yml"], light: true },
+    { name: "code-climate", fileNames: [".codeclimate.yml"] },
     {
         name: "prettier",
         fileNames: [
@@ -1447,15 +1440,13 @@ const fileIconsMap = [
     {
         name: "browserlist",
         fileNames: ["browserslist", ".browserslistrc"],
-        light: true,
     },
-    { name: "crystal", fileExtensions: ["cr", "ecr"], light: true },
+    { name: "crystal", fileExtensions: ["cr", "ecr"] },
     { name: "snyk", fileNames: [".snyk"] },
     {
         name: "drone",
         fileExtensions: ["drone.yml"],
         fileNames: [".drone.yml"],
-        light: true,
     },
     { name: "cuda", fileExtensions: ["cu", "cuh"] },
     { name: "log", fileExtensions: ["log"] },
@@ -1479,9 +1470,8 @@ const fileIconsMap = [
         name: "wakatime",
         fileNames: [".wakatime-project"],
         fileExtensions: [".wakatime-project"],
-        light: true,
     },
-    { name: "circleci", fileNames: ["circle.yml"], light: true },
+    { name: "circleci", fileNames: ["circle.yml"] },
     { name: "cloudfoundry", fileNames: [".cfignore"] },
     {
         name: "grunt",
@@ -1550,7 +1540,7 @@ const fileIconsMap = [
     },
     { name: "wepy", fileExtensions: ["wpy"] },
     { name: "fastlane", fileNames: ["fastfile", "appfile"] },
-    { name: "hcl", fileExtensions: ["hcl"], light: true },
+    { name: "hcl", fileExtensions: ["hcl"] },
     { name: "helm", fileNames: [".helmignore"] },
     { name: "san", fileExtensions: ["san"] },
     { name: "wallaby", fileNames: ["wallaby.js", "wallaby.conf.js"] },
@@ -1567,7 +1557,6 @@ const fileIconsMap = [
     { name: "webassembly", fileExtensions: ["wat", "wasm"] },
     {
         name: "semantic-release",
-        light: true,
         fileNames: [
             ".releaserc",
             ".releaserc.yaml",
@@ -1595,7 +1584,18 @@ const fileIconsMap = [
     { name: "mint", fileExtensions: ["mint"] },
     { name: "velocity", fileExtensions: ["vm", "fhtml", "vtl"] },
     { name: "godot", fileExtensions: ["gd"] },
-    { name: "godot-assets", fileExtensions: ["godot", "tres", "tscn"] },
+    {
+        name: "godot-assets",
+        fileExtensions: [
+            "godot",
+            "tres",
+            "tscn",
+            "gdns",
+            "gdnlib",
+            "gdshader",
+            "gdextension",
+        ],
+    },
     {
         name: "azure-pipelines",
         fileNames: ["azure-pipelines.yml", "azure-pipelines.yaml"],
@@ -1755,7 +1755,6 @@ const fileIconsMap = [
     {
         name: "uml",
         fileExtensions: ["iuml", "pu", "puml", "plantuml", "wsd"],
-        light: true,
     },
     {
         name: "meson",
@@ -1844,7 +1843,6 @@ const fileIconsMap = [
     {
         name: "stitches",
         fileNames: ["stitches.config.js", "stitches.config.ts"],
-        light: true,
     },
     {
         name: "nginx",
@@ -1884,7 +1882,6 @@ const fileIconsMap = [
             "snowpack.deps.json",
             "snowpack.config.json",
         ],
-        light: true,
     },
     { name: "brainfuck", fileExtensions: ["b", "bf"] },
     { name: "bicep", fileExtensions: ["bicep"] },
@@ -1937,7 +1934,7 @@ const fileIconsMap = [
     { name: "scala", fileExtensions: ["scala", "sc"] },
     { name: "lilypond", fileExtensions: ["ly"] },
     { name: "vlang", fileExtensions: ["v"], fileNames: ["vpkg.json", "v.mod"] },
-    { name: "chess", fileExtensions: ["pgn", "fen"], light: true },
+    { name: "chess", fileExtensions: ["pgn", "fen"] },
     { name: "gemini", fileExtensions: ["gmi", "gemini"] },
     { name: "sentry", fileNames: [".sentryclirc"] },
     {
@@ -1986,6 +1983,7 @@ const fileIconsMap = [
             "tsconfig.cjs.json",
             "tsconfig.esm.json",
             "tsconfig.mjs.json",
+            "tsconfig.doc.json",
         ],
         fileExtensions: ["tsconfig.json"],
     },
@@ -2127,7 +2125,6 @@ const fileIconsMap = [
     { name: "gleam", fileNames: ["gleam.toml"], fileExtensions: ["gleam"] },
     {
         name: "pnpm",
-        light: true,
         fileNames: ["pnpm-lock.yaml", "pnpm-workspace.yaml", ".pnpmfile.cjs"],
     },
     {
@@ -2152,7 +2149,6 @@ const fileIconsMap = [
     { name: "pinejs", fileExtensions: ["pine"] },
     {
         name: "nano-staged",
-        light: true,
         fileNames: [
             `.nano-staged.js`,
             `nano-staged.js`,
@@ -2176,6 +2172,7 @@ const fileIconsMap = [
             ".cracorc",
         ],
     },
+    { name: "tldraw", fileExtensions: ["tldr"] },
     { name: "cargo-toml", fileNames: ["Cargo.toml"] },
     { name: "cargo-lock", fileNames: ["Cargo.lock"] },
     { name: "toml", fileExtensions: ["toml"] },

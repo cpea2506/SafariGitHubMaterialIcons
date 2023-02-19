@@ -1,24 +1,3 @@
-const iconsMap = {
-    byFileName: (fileName) =>
-        fileIconsMap.find((item) => item.fileNames?.includes(fileName))?.name,
-    byFileExtension: (fileExtension) =>
-        fileIconsMap.find((item) =>
-            item.fileExtensions?.includes(fileExtension),
-        )?.name,
-    byFolder: (fileName) =>
-        folderIconsMap.find((item) => item.folderNames.includes(fileName))
-            ?.name,
-    byLanguage: (ids) =>
-        languageIconsMap.find((item) => item.ids.includes(ids))?.name,
-}
-
-const selectors = {
-    row: ".js-navigation-container[role=grid] > .js-navigation-item, file-tree .ActionList-content, a.tree-browser-result",
-    filename:
-        "div[role='rowheader'] > span, .ActionList-item-label, a.tree-browser-result > marked-text",
-    icon: ".octicon-file, .octicon-file-directory-fill, .octicon-file-submodule, a.tree-browser-result > svg.octicon.octicon-file",
-}
-
 /**
  * Replace file/folder icons in a row.
  *
@@ -49,7 +28,7 @@ function replaceIconInRow(row) {
     }
 
     // returns icon name if found or undefined.
-    let iconName = getIconName(iconElement, fileName)
+    const iconName = getIconName(iconElement, fileName)
 
     if (!iconName) {
         return
@@ -105,39 +84,39 @@ function getIconName(iconElement, fileName) {
     }
 
     // first look in fileNames and folderNames.
-    if (iconsMap.byFileName(fileName) && !isDir) {
-        return iconsMap.byFileName(fileName)
+    if (getIcon.byFileName(fileName) && !isDir) {
+        return getIcon.byFileName(fileName)
     }
 
-    if (iconsMap.byFolder(fileName) && isDir) {
-        return iconsMap.byFolder(fileName)
+    if (getIcon.byFolder(fileName) && isDir) {
+        return getIcon.byFolder(fileName)
     }
 
     // then check all lowercase.
-    if (iconsMap.byFileName(lowerFileName) && !isDir) {
-        return iconsMap.byFileName(lowerFileName)
+    if (getIcon.byFileName(lowerFileName) && !isDir) {
+        return getIcon.byFileName(lowerFileName)
     }
 
-    if (iconsMap.byFolder(lowerFileName) && isDir) {
-        return iconsMap.byFolder(lowerFileName)
+    if (getIcon.byFolder(lowerFileName) && isDir) {
+        return getIcon.byFolder(lowerFileName)
     }
 
     // look for extension in fileExtensions
-    if (iconsMap.byFileExtension(fileExtension) && !isDir) {
-        return iconsMap.byFileExtension(fileExtension)
+    if (getIcon.byFileExtension(fileExtension) && !isDir) {
+        return getIcon.byFileExtension(fileExtension)
     }
 
     // look for filename and extension in language map.
-    if (iconsMap.byLanguage(fileName) && !isDir) {
-        return iconsMap.byLanguage(fileName)
+    if (getIcon.byLanguage(fileName) && !isDir) {
+        return getIcon.byLanguage(fileName)
     }
 
-    if (iconsMap.byLanguage(lowerFileName) && !isDir) {
-        return iconsMap.byLanguage(lowerFileName)
+    if (getIcon.byLanguage(lowerFileName) && !isDir) {
+        return getIcon.byLanguage(lowerFileName)
     }
 
-    if (iconsMap.byLanguage(fileExtension) && !isDir) {
-        return iconsMap.byLanguage(fileExtension)
+    if (getIcon.byLanguage(fileExtension) && !isDir) {
+        return getIcon.byLanguage(fileExtension)
     }
 
     // fallback into default file or folder if no matches.

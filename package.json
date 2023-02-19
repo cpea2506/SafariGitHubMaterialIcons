@@ -4,6 +4,9 @@
     "description": "File browser on Github with VScode material icons on Safari.",
     "author": "CPea2506",
     "license": "MIT",
+    "script": {
+        "format": "prettier --write ."
+    },
     "devDependencies": {
         "@fsouza/prettierd": "^0.23.2",
         "eslint-config-prettier": "^8.6.0",

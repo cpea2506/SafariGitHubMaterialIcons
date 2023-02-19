@@ -1,4 +1,4 @@
-const languageIconsMap = [
+const languageIcons = [
     { name: "git", ids: ["git", "git-commit", "git-rebase", "ignore"] },
     { name: "c", ids: ["c", "objective-c", "objective-cpp"] },
     { name: "yaml", ids: ["yaml"] },
@@ -72,6 +72,7 @@ const languageIconsMap = [
     { name: "django", ids: ["django-html", "django-txt"] },
     { name: "html", ids: ["html"] },
     { name: "godot", ids: ["gdscript"] },
+    { name: "godot-assets", ids: ["gdresource", "gdshader"] },
     { name: "vim", ids: ["viml"] },
     { name: "silverstripe", ids: [] },
     { name: "prolog", ids: ["prolog"] },

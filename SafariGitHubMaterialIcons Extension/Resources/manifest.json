@@ -16,9 +16,10 @@
             "matches": ["https://github.com/*"],
             "js": [
                 "lib/index.js",
-                "lib/file-icons.js",
-                "lib/folder-icons.js",
-                "lib/language-icons.js",
+                "lib/utils.js",
+                "lib/icons/file-icons.js",
+                "lib/icons/folder-icons.js",
+                "lib/icons/language-icons.js",
                 "content.js"
             ]
         }
